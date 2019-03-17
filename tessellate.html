@@ -1345,9 +1345,9 @@ $(document).ready(function() {
         e.preventDefault();        
         $(this).closest('article').find('.inner').clone().appendTo('modal'); 
         $('modal').fadeIn(300, "linear");
-        flexFrame();          
         $('modal').css('visibility', 'visible');
         setTimeout(function(){$('modal').addClass('slide');},100);
+        flexFrame();
         e.stopPropagation();        
     });
     $('modal').on('click', function(e) {
@@ -1405,10 +1405,10 @@ $(document).ready(function() {
         $newElems.find('.small, .over').click(function(e){
             e.preventDefault();        
             $(this).closest('article').find('.inner').clone().appendTo('modal');
-            flexFrame();       
             $('modal').fadeIn(300, "linear");
             $('modal').css('visibility', 'visible');
             setTimeout(function(){$('modal').addClass('slide');},100);
+            flexFrame();             
             e.stopPropagation();        
         });
         $newElems.find('p').filter(function (){return $.trim(this.innerHTML) == ""}).remove(); 
