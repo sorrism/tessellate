@@ -1,0 +1,1436 @@
+<!--
+ 
+ 
+        theme: tessellate 
+        - sorrism -
+                
+        time stamp shortening by bycholoethemes
+        responsive videos by nouvae
+        icons: https://feathericons.com/
+        photosets by annasthms @ espoirthemes
+ 
+-->
+
+
+<!DOCTYPE html>
+
+<head>
+
+
+<title>{block:TagPage}#{Tag} : {/block:TagPage} {block:PostSummary}{PostSummary} : {/block:PostSummary}{Title}</title>
+ 
+<link rel="shortcut icon" href="{favicon}">
+ 
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+<!--Default Variables-->
+ 
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Background Two" content="#fafafa"/>
+<meta name="color:Accents" content="#f4f4f4"/>
+<meta name="color:Text" content="#909090"/>
+<meta name="color:Link Hover" content="#eeeeee"/>
+<meta name="color:Blog Title" content="#202020"/>
+<meta name="color:Title" content="#000000"/>
+<meta name="color:Scrollbar" content="#aaaaaa" />
+<meta name="color:Borders" content="#eeeeee"/>
+<meta name="color:Text Borders" content="#eeeeee"/>
+
+<meta name="select:Gutter" title="1px" content="1"/>
+<meta name="select:Gutter" title="2px" content="2"/>
+<meta name="select:Gutter" title="3px" content="3"/>
+<meta name="select:Gutter" title="4px" content="4"/>
+<meta name="select:Gutter" title="5px" content="5"/>
+
+<meta name="text:Link 1 URL" content=""/>
+<meta name="text:Link 1" content=""/>
+<meta name="text:Link 2 URL" content=""/>
+<meta name="text:Link 2" content=""/>
+<meta name="text:Link 3 URL" content=""/>
+<meta name="text:Link 3" content=""/>
+ 
+<meta name="text:Home Title" content="home"/>
+<meta name="text:Ask Title" content="message"/>
+<meta name="text:Archive Title" content="archive"/>
+
+<meta name="text:Featured Tag One" content="photography"/>
+<meta name="text:Featured Tag Two" content="fashion"/>
+<meta name="text:Featured Tag Three" content="art"/>
+<meta name="text:Featured Tag Four" content="portrait"/>
+
+<meta name="text:Footer Text" content=""/>
+
+<meta name="if:Infinite Scroll" content="0"/>
+<meta name="if:Center Header" content="0"/>
+<meta name="if:Featured Tags" content="1"/>
+
+<meta name="select:Font" content="Lato" title="Lato"/>
+<meta name="select:Font" content="Roboto" title="Roboto"/>
+<meta name="select:Font" content="PT Sans" title="PT Sans"/>
+<meta name="select:Font" content="Source Sans Pro" title="Source Sans Pro"/>
+<meta name="select:Font" content="Muli" title="Muli"/>
+<meta name="select:Font" content="Rubik" title="Rubik"/>
+<meta name="select:Font" content="Fira Sans" title="Fira Sans"/>
+<meta name="select:Font" content="Open Sans" title="Open Sans"/>
+<meta name="select:Font" content="Libre Franklin" title="Libre Franklin"/>
+<meta name="select:Font" content="Lora" title="Lora"/>
+<meta name="select:Font" content="Playfair Display" title="Playfair Display"/>
+<meta name="select:Font" content="Merriweather" title="Merriweather"/>
+<meta name="select:Font" content="Libre Baskerville" title="Libre Baskerville"/>
+<meta name="select:Font" content="Roboto Slab" title="Roboto Slab"/>
+<meta name="select:Font" content="Georgia" title="Georgia"/>
+<meta name="select:Font" content="Aleo" title="Aleo"/>
+<meta name="select:Font" content="PT Serif" title="PT Serif"/>
+<meta name="select:Font" content="Noto Serif" title="Noto Serif"/>
+<meta name="select:Font" content="PT Mono" title="PT Mono"/>
+<meta name="select:Font" content="Roboto Mono" title="Roboto Mono"/>
+<meta name="select:Font" content="Inconsolata" title="Inconsolata"/>
+<meta name="select:Font" content="Source Code Pro" title="Source Code Pro"/>
+
+<meta name="select:Accent Styling" content="upp" title="Uppercase"/>
+<meta name="select:Accent Styling" content="itl" title="Italic"/>
+<meta name="select:Accent Styling" content="" title="None"/>
+
+
+<link href="https://fonts.googleapis.com/css?family={select:Font}:400,400i,600,700" rel="stylesheet"><link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
+
+<!--CSS customization here. -->
+ 
+<style type="text/css">
+
+/*tumblr controls and lightbox*/
+
+.tmblr-lightbox {background:rgba({RGBcolor:background two}, .95)!important;}
+ 
+.tmblr-lightbox img {opacity:0;}
+ 
+.lightbox-caption {
+    color:{color:title}!important;
+    font-family:inherit!important;
+    font-size:1em!important;
+    font-weight:normal!important;
+    text-shadow:none!important;
+}
+ 
+.lightbox-image {
+    -moz-box-shadow:none!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:none!important;
+    -moz-border-radius:0px!important;
+    -webkit-border-radius:0px!important;
+    border-radius:0px!important;
+    padding:0px!important;
+    opacity:1!important;
+}
+ 
+.vignette {opacity:0!Important;}
+
+body > .tmblr-iframe {
+    right:15px;
+    opacity:0;
+    overflow:auto;
+    width:0;
+    top:10px;
+    z-index:99;
+    -webkit-transform:scale(.6);
+    -moz-transform:scale(.6);
+    transform:scale(.6);      
+    -webkit-filter:invert(100%); /* Safari 6.0 - 9.0 */
+    filter:invert(100%);
+    -webkit-backface-visibility:hidden;
+    padding:0px 50px 10px 10px;
+    transition:all .3s linear;    
+    -webkit-transition:all .3s linear;
+    -o-transition:all .3s linear;
+    -moz-transition:all .3s linear; 
+    -webkit-backface-visibility:hidden;
+    -webkit-transform-origin:right top;
+    -moz-transform-origin:right top;
+    -ms-transform-origin:right top;
+    -o-transform-origin:right top;
+    transform-origin:right top;        
+}
+
+body > .tmblr-iframe:hover {opacity:.5!important;} 
+
+body > .tmblr-iframe, .cc {position:fixed;}
+
+.cc {
+    top:18px;   
+    z-index:12;      
+    right:15px;
+}
+
+.cc svg {
+    display:inline-block;
+    margin-left:5px;
+    width:12px;
+    height:auto;
+    opacity:.75;
+    overflow:visible;
+}
+
+.cc svg {stroke:{color:title};}
+
+/*tooltip*/
+
+.ui-tooltip {  
+    position:Absolute;
+    z-index:9999;
+    padding-top:10px;
+}
+
+.ui-tooltip-content { 
+    background:{color:accents};
+    padding:0.75em 10px;
+    box-shadow:2px 2px 2px rgba({RGBcolor:title},.7);
+    -webkit-box-shadow:2px 2px 10px rgba({RGBcolor:text},.3);
+}
+
+.upp .ui-tooltip-content {
+    font-size:.8em;
+    font-weight:600;
+}
+
+.itl .ui-tooltip-content {font-style:italic;}
+
+/*scrollbar*/
+
+::-webkit-scrollbar {
+    height:6px;
+    width:6px; 
+    background:{color:background two};
+}
+
+::-webkit-scrollbar-track {background:transparent;}
+
+::-webkit-scrollbar-thumb{
+    background:{color:scrollbar};
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;    
+}
+
+article *::-webkit-scrollbar {
+    background:{color:background};
+    width:2px;
+    height:2px;
+}
+
+/*general*/
+
+body {
+    background:{color:background two};
+    color:{color:text};
+    font:13px/1.4em {select:font}, helvetica, sans-serif;
+    word-wrap:break-word;    
+    text-align:left;
+    overflow-x:hidden;
+    letter-spacing:.25px;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;          
+    margin:0;
+}
+
+a {
+    color:{color:text};
+    text-decoration:none;
+}    
+
+a, svg, .ftags a > span {
+    transition:all .3s linear;    
+    -webkit-transition:all .3s linear;
+    -o-transition:all .3s linear;
+    -moz-transition:all .3s linear;      
+}
+ 
+a, a img {cursor:pointer;}
+ 
+a:hover {
+    color:{color:link hover}!important;
+    text-decoration:none;
+}
+
+a svg:hover {stroke:{color:link hover};}
+ 
+img {
+    opacity:1;
+    border:0;
+    text-decoration:none;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+ 
+blockquote {
+    padding:.25em 0 .25em 15px;
+    margin:.5em 0;
+    border-left:1px solid {color:text borders};
+}
+ 
+pre {
+    padding:0;
+    margin:0;
+    line-height:inherit!important;
+    background:transparent;
+    font-family:consolas!Important;
+    font-size:inherit!important;
+    white-space:pre-wrap;
+    white-space:-moz-pre-wrap;
+    white-space:-pre-wrap;
+    white-space:-o-pre-wrap;
+    word-wrap:break-word;
+}
+ 
+p {margin:.5em 0;}
+ 
+p:first-of-type {margin-top:0;}
+ 
+p:last-of-type {margin-bottom:0;}
+ 
+b, strong, b a, strong a {
+    font-weight:700;
+    color:{color:title};
+}
+ 
+ol, ul {
+    list-style:none;
+    text-align:left;
+    padding-left:0;
+}
+ 
+li {
+    position:relative;
+    padding:.25em 0 .25em 20px;
+    margin-left:0;
+}
+ 
+ol li {counter-increment:list;}
+ 
+ol li:before, ul li:before {
+    left:-20px;    
+    display:inline-block;
+    position:relative;
+    width:0;
+    vertical-align:middle!important;    
+}
+ 
+ol li:before {content:counter(list) '.';}
+ 
+ul li:before {
+    content:'';
+    width:15px;
+    height:1px;
+    position:absolute;
+    left:0;
+    top:calc(.7em + 3px);
+    background:{color:text borders};
+}
+ 
+.chat li:before, .meat li:before {display:none!important;}
+ 
+.chat li {margin:0;}
+ 
+small, big, sub, pre, sup {
+    font-size:1em!important;
+    line-height:1.4em!important;
+    vertical-align:baseline!important;
+}
+ 
+h1, h2, h3, h4 {
+    margin:.5em 0;
+    font-size:1em;
+    padding:0;
+    font-weight:600;
+    color:{color:title};
+    font-weight:normal;
+}
+ 
+hr {
+    border:none;
+    box-shadow:0;
+    margin:2em 0;
+    width:30%;
+    border-top:2px solid {color:text borders};
+}
+
+@-webkit-keyframes fade-in {
+	0% {opacity:0;}
+	50% { opacity:0;}
+	100% { opacity:1;}
+}
+
+@-moz-keyframes fade-in {
+	0% {opacity:0;}
+	50% { opacity:0;}
+	100% { opacity:1;}
+}
+
+@keyframes fade-in {
+	0% {opacity:0;}
+	50% { opacity:0;}
+	100% { opacity:1;}
+}
+
+header {
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 2s;    
+}
+
+/*header*/
+
+header {
+    position:relative;
+    {block:ifCenterHeader}
+    text-align:center;
+    {/block:ifCenterHeader}    
+}
+
+
+.tai {
+    color:{color:blog title};  
+    font-size:1.2em; 
+    line-height:39px; 
+    display:block;    
+}
+
+.upp nav, .upp .pagination a, .upp .bl  {
+    font-size:.8em;    
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;     
+}
+
+.upp .tai, .upp .title, .upp .ftags span, .upp .etc {
+    text-transform:uppercase;
+    letter-spacing:1px;    
+}
+
+.upp .title, .upp .tai {font-size:1em;}
+
+.upp nav {font-weight:600;}
+
+.itl .tai, .itl .title {font-style:italic;}
+
+nav {padding-top:15px;}
+
+nav a {
+    display:inline-block;
+    margin-right:10px;
+}
+
+header > div {margin-top:.75em;}
+
+/*pagination*/
+
+footer {
+    padding-top:50px;
+    margin-top:50px;
+    position:relative;
+    border-top:1px solid {color:borders};
+    z-index:-1!important;
+    opacity:0!important;      
+}
+
+footer a {display:inline-block}
+
+.pagination a span {display:inline-block;}
+
+.pagination {text-align:right;}
+
+.left {text-align:left;}
+
+{block:indexpage}
+.hey {float:left;}
+.stay {float:none!Important;}
+{/block:indexpage}
+
+.float {float:right;}
+
+.nice {
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    font-size:8px;
+}
+
+.page-load-status {display:none;}
+
+.page-load-status a span {display:inline-block;}
+
+.infinite-scroll-request, .page-load-status a {position:absolute;}
+
+.page-load-status a {
+    left:0;
+    top:0;
+ 	-webkit-transform:translatey(-50%);
+	-moz-transform:translatey(-50%);
+	-ms-transform:translatey(-50%);
+	transform:translatey(-50%);
+}
+
+.loading {
+    left:calc(50% - 12.5px);
+    bottom:calc((150px + {select:gutter}px )* 4 - 100px);
+    position:absolute;
+    display:none;
+}
+
+.loading, .spinner {
+    width:25px;
+    height:25px;    
+}
+
+.spinner {
+    margin:0 auto;
+    background-color:rgba({RGBcolor:text},.6);
+    border-radius:100%;  
+    -webkit-animation:scaleout 1.0s infinite ease-in-out;
+    animation:scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+    0% {-webkit-transform:scale(0) }
+    
+    100% {
+        -webkit-transform:scale(1.0);
+        opacity:0;
+    }
+}
+
+@keyframes scaleout {
+    0% { 
+        -webkit-transform:scale(0);
+        transform:scale(0);
+    } 
+    
+    100% {
+        -webkit-transform:scale(1.0);
+        transform:scale(1.0);
+        opacity:0;
+    }
+}
+
+.ftext {
+    font-size:.9em;
+    {block:ifnotcenterheader}
+    text-align:justify;
+    {/block:ifnotcenterheader}
+    margin-top:15px;
+}
+
+footer .ftext:first-child {margin-top:-15px}
+
+.bl span, .load, .pag span {
+    padding:15px;
+    background:{color:accents};
+}
+
+.ftags a {
+    display:inline-block;
+    position:relative;    
+    color:{color:title}!important;
+    margin:15px {select:gutter}px 15px 0;
+}
+
+.ftags a:last-of-type {margin-right:0;}
+
+.ftags a > span {
+    position:absolute;
+    bottom:-10px;
+    font-size:.9em;
+    padding:15px;
+    line-height:1.4em;
+    left:0;
+    opacity:0;
+    background:transparent;
+    width:calc(100% - 30px);
+}
+
+.ftags a:hover > span {
+    opacity:1;
+    bottom:0;
+    background:{color:background};
+}
+
+.ftags .over:hover svg {opacity:.7;}
+
+/*posts*/
+
+.con {
+    padding:100px;
+    margin:0 auto;
+    min-height:calc(100vh - 200px);
+    background:{color:background};
+}
+
+.con, section {
+    width:calc((150px + {select:gutter}px )* 4 - {select:gutter}px);
+    position:relative;
+}
+
+section {
+    margin:75px auto;
+    padding-top:75px;
+    border-top:1px solid {color:borders}; 
+    {block:permalinkpage}
+    margin-bottom:50px;
+    {/block:permalinkpage}    
+}
+
+article {
+    vertical-align:top;
+    position:relative;
+    z-index:-1!important;
+    opacity:0!important;
+    background:{color:background};
+    width:100%;
+    {block:indexpage}
+    width:150px;
+    height:150px;
+    margin-bottom:{select:gutter}px;
+    display:inline-block;   
+    overflow:hidden;    
+    {/block:indexpage}
+}
+
+article, footer {
+    transition:opacity 1s;
+    -webkit-transition:opacity 1s;  
+    -moz-transition:opacity 1s;
+    -o-transition:opacity 1s;    
+}
+
+.loaded {
+    z-index:2!important;
+    opacity:1!important;
+}    
+
+.ph {
+    position:relative;
+    overflow:hidden;
+    display:block;
+}
+
+.ph img {width:100%;}
+
+[photoset-layout] {grid-gap:{select:gutter}px;}
+
+[photoset-layout] div {cursor:pointer;}
+
+.small {
+    display:block;
+    height:150px;
+    width:150px;
+    background:{color:accents} no-repeat center;
+    background-size:cover;   
+    -webkit-backface-visibility:hidden;    
+}
+
+.small:hover {opacity:.7;}
+
+.ps img:not(:first-child) {display:none;}
+ 
+.small img{block:indexpage}, article .photo-slideshow{/block:indexpage} {
+    width:100%;
+    display:none;
+}
+
+{block:indexpage}.video, .video * {display:none;}{/block:indexpage}
+
+modal .video, modal .pinfo {display:block!important;}
+
+.comment figure.tmblr-full {margin:calc({select:gutter}px /2) 0!important;}
+
+.comment figure.tmblr-full:first-of-type {margin-top:10px!important;}
+
+.comment figure.tmblr-full:last-of-type {margin-bottom:10px!important;}
+
+.comment figure.tmblr-full:last-child {margin-bottom:0!important;}
+
+modal .ed .pinfo {
+    display:flex!important;
+    flex-direction:row;
+    align-items:stretch;
+ }
+ 
+.video *, article video {
+    display:block;
+    width:100%;
+}
+
+.spotify_audio_player {height:80px!important;}
+ 
+.tmblr-truncated-link {
+    display:inline-block;
+    font-style:italic;
+    font-weight:600;
+    text-transform:lowercase;    
+}    
+
+.over {
+    position:absolute;
+    top:0;
+    left:0;
+    height:150px;
+    width:150px;   
+    background:{color:accents};
+    z-index:5;
+    cursor:pointer;
+    line-height:150px;
+    text-align:center;    
+}
+
+.over svg {
+    position:absolute;
+    height:2em;
+    width:2em;
+    top:calc(50% - 1em);
+    left:calc(50% - 1em);
+    stroke:rgba({RGBcolor:text},.7);
+    fill:none;
+    stroke-width:1.5;    
+}
+
+modal .over {display:none;}
+
+{block:indexpage}
+.big {
+    width:calc(300px + {select:gutter}px);
+    height:calc(300px + {select:gutter}px);
+}
+.big .small, .big .over {
+    width:calc(300px + {select:gutter}px);
+    height:calc(300px + {select:gutter}px);
+}
+.big .over {line-height:calc(300px + {select:gutter}px);}
+{/block:indexpage}
+
+/*modal*/
+
+modal {
+    position:fixed;
+    z-index:15;
+    display:none;
+    visibility:hidden;
+    overflow-y:scroll;
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+}
+
+modal:before {
+    content:'';
+    width:calc((150px + {select:gutter}px )* 4);
+    padding:100px 0;
+    background:{color:background};
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translatex(-50%);
+    -webkit-tranform:translatex(-50%);
+    z-index:16;
+    height:calc(100vh - 200px);
+}
+
+modal .inner {
+    display:block;
+    position:relative;
+    z-index:20;
+    background:transparent;
+    width:calc((150px + {select:gutter}px )* 4);   
+    margin:50px auto;
+    padding:50px 25px;
+	-webkit-transform:translateY(50px);
+	-moz-transform:translateY(50px);
+	-ms-transform:translateY(50px); 
+	transform:translateY(50px);
+	opacity:0;
+	-webkit-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;
+	transition:all 0.2s linear;  
+}
+
+modal.slide .inner {
+    background:{color:background}; 
+	-webkit-transform:translateY(0);
+	-moz-transform:translateY(0);
+	-ms-transform:translateY(0);
+	transform:translateY(0);
+	opacity:1;
+}
+
+modal .video * {width:calc((150px + {select:gutter}px )* 4);}
+
+modal img {
+    display:block;
+    width:100%;
+}
+
+modal .small {display:none;}
+ 
+/*titles*/
+
+.title {
+    color:{color:title};
+    font-size:1.1em;
+    line-height:1.4em;
+}
+
+.title a {color:{color:title};}
+
+.title a:hover {color:{color:link hover};}
+   
+.source {margin-top:10px;}
+
+/*captions*/
+
+modal .caption {
+    flex:1;
+    padding-left:50px;
+}
+
+.p .caption {
+    padding-bottom:50px;
+    margin:-25px 0 50px 0;
+    border-bottom:1px solid {color:borders};
+}
+
+.caption *:not(.user) {
+    font-family:inherit!important;
+    color:inherit!important;
+    font-size:inherit!important;
+    font-weight:inherit!important;
+    text-align:inherit!important;
+}
+
+.caption .comment:first-of-type blockquote:nth-child(2) {
+    padding:0;
+    border:0;
+    margin:0;
+}
+
+.comment {
+    padding:0 0 15px 0;
+    margin:0;
+    list-style:none;
+}    
+
+.comment a:not(.user) {border-bottom:1px solid rgba({RGBcolor:text},.3);}
+
+.comment:last-of-type {padding-bottom:0;}
+
+.ed .comment:first-of-type {padding-top:25px;}
+
+.ed .pinfo .comment:first-of-type {padding-top:0;}
+
+
+.user {
+    display:inline-block;
+    line-height:1em;
+    margin-bottom:10px;
+}
+
+.user a, .user {color:rgba({RGBcolor:text},.7);}
+
+.ted:first-of-type {padding-top:25px;}
+
+/*asks*/
+
+.as {
+    margin:0 5px 0 0;
+    color:{color:title};
+    text-transform:lowercase;
+}
+
+.as a {color:{color:title};}
+
+.q {
+    margin-bottom:15px;
+    padding:15px;
+    background:{color:Accents};
+}    
+
+/*chats*/
+
+.ted .chat {margin-top:-15px;}
+
+.chat {
+    margin:0;    
+    padding:0;
+    list-style:none;
+}
+
+.l {
+    padding:15px 0;
+    border-bottom:1px solid {color:borders};
+}
+
+.l:last-of-type {
+    border:0;
+    padding-bottom:0;
+}
+
+.l:first-of-type {padding-top:0;}
+
+.label {
+    display:block;
+    font-style:italic;
+    text-transform:lowercase;
+    margin-bottom:.5em;
+    color:{color:title};
+}
+
+/*audio*/
+
+.player {
+    width:25px;
+    height:24px;
+    position:absolute;
+    left:10px;
+    top:calc(50% - 15px);
+    display:block;
+    overflow:hidden;
+}
+
+.hold {
+    position:relative;
+    display:block;
+    min-height:24px;
+    padding:15px;    
+    color:rgba({RGBcolor:text},.7);    
+}
+
+.audio_info {
+    vertical-align:middle;
+    line-height:12px;
+    margin-left:35px;
+    max-width:calc(100% - 35px);   
+}
+
+.audio_info span {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;    
+    display:block;
+}
+
+.hold .track {
+    font-weight:600;
+    color:{color:text};
+}
+
+/*permalink and notes*/
+
+.pinfo {margin-bottom:50px;}
+
+.i .pinfo {
+    display:none;
+    padding-bottom:50px;
+    border-bottom:1px solid {color:borders};  
+}
+
+.when a {color:{color:text}!important;}
+
+.r {margin-right:3px;}
+
+.r:after {content:' post, ';}
+
+.ed .when, .caption {vertical-align:top;}
+
+.ed .when a {
+    position:relative;
+    line-height:1em;
+}
+
+.ed .when a > span {
+    display:inline-block;
+    position:relative;
+}
+
+.upp .when, .upp .permalink {
+    font-size:.8em;
+    text-transform:uppercase;
+    letter-spacing:1px;  
+}
+
+.permalink {margin-top:50px;}
+
+.permalink > span, .when > span {
+    padding:15px;
+    display:inline-block;
+    background:{color:accents};
+}
+
+.when a, .permalink a {
+    display:inline-block;
+    color:rgba({RGBcolor:text},.7);    
+}
+
+.like-b {height:1em;}
+ 
+.like-b .like_button iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:1em!important;
+    z-index:2;
+    opacity:0.0000001;
+}
+ 
+.like-b .liked ~ .b {color:#D95E40;}
+ 
+.like-b .liked ~ .b:after {content:'d';}
+
+.pag {
+    margin-top:15px;
+    
+}
+
+.meat {
+    position:Relative;
+    text-transform:lowercase;
+    padding-top:50px;
+    margin-top:50px;
+    border-top:1px solid {color:borders};
+}
+
+.pag {
+    margin-top:-75px;
+    position:absolute;
+}
+
+.pag span {display:inline-block;}
+
+.tags {margin-top:5px;}
+
+.tags * {color:rgba({RGBcolor:text},5);}
+
+.tags a {
+    display:inline;
+    margin-right:5px;
+}
+
+ol.notes {
+    margin:0;    
+    font-size:.8em;
+    list-style-type:none; 
+    padding:0;
+    max-height:300px;
+    overflow-y:auto;
+}
+
+ol.notes li.note {
+    padding:0;
+    width:50%;
+    vertical-align:top;
+    display:inline-block;
+}
+
+ol.notes li.note:last-of-type {padding-bottom:0;}
+
+ol.notes li.note:nth-child(odd) * {color:rgba({RGBcolor:text},.7);}
+
+ol.notes li.note img.avatar {display:none!important;}
+
+.more_notes_link, .notes_loading {
+    color:{color:title}!important;
+    display:block;
+    text-align:left!important;
+}
+
+/*responsiveness, ugh*/
+
+body {
+	-webkit-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;
+	transition:all 0.2s linear;     
+}
+
+.sub800 .con {padding:100px 25px 50px 25px;}
+
+.sub600 .con {padding:50px 15px;}
+
+.sub800 section, .sub800 article, .sub800 .con {width:calc(100vw - 50px);}    
+
+.sub600 section, .sub600 article, .sub600 .con {width:calc(100vw - 30px)!important;}
+
+
+.sub800 article {
+    display:block;
+    height:auto!Important;
+    margin-bottom:50px;
+    padding-bottom:50px;
+    border-bottom:1px solid {color:borders};
+    overflow:auto;
+}
+
+.sub800 footer {
+    border-top:0;
+    margin-top:0;
+    padding-top:0;
+}
+
+.sub800 .small, .sub800 .over, .sub800 .hey {display:none;}
+
+.sub800 .video {display:block;}
+
+.sub800 .pinfo {
+    padding-bottom:25px;
+    border:0;
+    margin:0;
+}
+
+.sub800 .ed .pinfo {
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;    
+}
+
+.sub800 .ed .caption {flex:1}
+
+.sub800 .when {margin-bottom:25px;}
+
+.sub800 .ed .when {margin-right:50px;}
+
+.sub600 .ed .pinfo {display:block!important;}
+
+.sub600 section {
+    margin:50px auto;
+    padding-top:50px;
+}
+
+.sub600 .con {text-align:center;}
+
+.sub600 .ed .when {margin-right:0;}
+
+.sub600 .pagination {
+    text-align:center;
+}
+
+{customCss}
+
+</style>
+
+</head>
+
+<body class="{block:indexpage}i{/block:indexpage} {block:permalinkpage}p{/block:permalinkpage} {select:accent styling}" {block:homepage}id="page{currentpage}"{/block:homepage}><div class="cc"><i data-feather="settings"></i></div><modal class="pop"></modal>
+
+<div class="con">
+<header><a href="/" class="tai">{title}</a><div>{description}</div><nav>{block:ifHomeTitle}<a href="/">{text:home title}</a>{/block:ifHomeTitle}{block:ifAskTitle}<a href="/ask">{text:ask title}</a>{/block:ifAskTitle}{block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}{block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}{block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}{block:ifArchiveTitle}<a href="/archive">{text:archive title}</a>{/block:ifArchiveTitle}</nav></header>
+
+<section id="entries">{block:Posts}<article id="{PostId}"><div class="inner {block:caption}ed{/block:caption}">
+
+{block:Date}
+<div class="pinfo">
+
+{block:indexpage}<div class="when"><span><a href="{permalink}" target="_blank"><span class="tm">{timestamp}</span>{block:notecount} with <span class="not">{notecount}</span>{/block:notecount}</a><br><a href="{ReblogURL}" target="_blank" class="r">reblog</a><a class="like-b">{LikeButton size="50"}<span class="b">like</span></a></span></div>{/block:indexpage}
+
+{block:caption}<div class="caption">{block:Reblogs}<li class="comment"><a {block:haspermalink}href="{permalink}"{/block:haspermalink} class="user" target="_blank">{username}</a>{body}</li>{/block:Reblogs}{block:NotReblog}<li class="comment"><a {block:haspermalink}href="{permalink}"{/block:haspermalink} class="user" target="_blank">{name}</a>{Caption}</li>{/block:NotReblog}</div>{/block:caption}
+
+</div>
+{/block:Date}
+
+{block:Quote}{block:indexpage}<div class="over"><i data-feather="message-circle"></i></div>{/block:indexpage}<div class="title">{Quote}</div>{block:Source}<div class="source">{Source}</div>{/block:Source}{/block:Quote}
+ 
+{block:Text}{block:indexpage}<div class="over"><i data-feather="file-text"></i></div>{/block:indexpage}{block:Title}<div class="title">{Title}</div>{/block:Title}{block:RebloggedFrom}{block:Reblogs}<li class="comment {block:Title}ted{/block:Title}"><a {block:haspermalink}href="{permalink}"{/block:haspermalink} class="user" target="_blank">{username}</a>{body}</li>{/block:Reblogs}{/block:RebloggedFrom}{block:NotReblog}<li class="comment {block:Title}ted{/block:Title}">{body}</li>{/block:NotReblog}{/block:Text}
+ 
+{block:Link}{block:indexpage}<div class="over"><i data-feather="link"></i></div>{/block:indexpage}<div class="title"><a href="{URL}" {Target}>{Name}</a></div>
+{block:Description}{block:NotReblog}<li class="comment ted">{description}</li>{/block:NotReblog}{/block:Description}{block:RebloggedFrom}{block:Reblogs}<li class="comment"><a {block:haspermalink}href="{permalink}"{/block:haspermalink} class="user" target="_blank">{username}</a>{body}</li>{/block:Reblogs}{/block:RebloggedFrom}{/block:Link}
+ 
+{block:Chat}{block:indexpage}<div class="over"><i data-feather="users"></i></div>{/block:indexpage}{block:Title}<div class="title">{Title}</div>{/block:Title}<ol class="chat {block:Title}ted{/block:Title}">{block:Lines}<li class="l {Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}</ol>{/block:Chat}
+ 
+<div class="ph">{block:Photo}{block:indexpage}<a class="small" style="background-image:url('{PhotoURL-HighRes}')"></a><a class="reg"><img src="{PhotoURL-HighRes}" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"></a>{/block:indexpage}{block:permalinkpage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:permalinkpage}{/block:Photo}
+ 
+{block:Photoset}{block:indexpage}{block:Photos}<a class="small ps" style="background-image:url('{PhotoURL-HighRes}');"></a>{/block:Photos}{/block:indexpage}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>{/block:Photoset}
+</div>
+ 
+{block:Video}{block:indexpage}<div class="over"><i data-feather="film"></i></div>{/block:indexpage}<div class="video">{Video-500}</div>{/block:Video}
+
+
+{block:Audio}{block:indexpage}<div class="over"><i data-feather="music"></i></div>{/block:indexpage}{block:AudioPlayer}<div class="hold"><div class="player">{AudioPlayerWhite}</div><div class="audio_info">{block:TrackName}<span class="track">{TrackName}</span>{/block:TrackName}{block:Artist}<span class="artist">{Artist}</span>{/block:Artist}</div></div>{/block:AudioPlayer}{/block:Audio}
+
+{block:Answer}{block:indexpage}<div class="over"><i data-feather="mail"></i></div>{/block:indexpage}<div class="q"><span class="as user">{Asker} sent:</span>{Question}</div>{block:answerer}<li class="comment"><span class="user">{answerer} replied:</span><div class="tex">{answer}</div></li>{/block:Answerer}{block:NotReblog}<li class="comment"><div class="tex" style="margin-top:0;">{replies}</div></li>{/block:NotReblog}{block:rebloggedfrom}{block:reblogs}<li class="comment"><a {block:haspermalink}href="{permalink}"{/block:haspermalink} class="user" target="_blank">{username}</a><div class="tex">{body}</div></li>{/block:Reblogs}{/block:rebloggedfrom}{/block:Answer}
+    
+</div> 
+{block:date}
+{block:permalinkpage}<div class="permalink"><span>posted {dayofweek}, {month} {dayofmonth}{dayofmonthsuffix}{block:RebloggedFrom}<br>via: <a href="{ReblogParentURL}">{ReblogParentName}</a>{block:ContentSource}, source: <a href="{ReblogRootURL}">{ReblogRootName}</a>{/block:ContentSource}{/block:RebloggedFrom}{block:HasTags}<div class="tags">{block:Tags}<a href="{TagUrl}">#{Tag}</a> {/block:Tags}</div>{/block:HasTags}</span></div>{/block:permalinkpage}    
+{/block:date}    
+</article>
+
+{block:PostNotes}<article class="meat"><div class="pag title"><span>{NoteCountWithLabel}</span></div>{PostNotes}</article>{/block:PostNotes}
+
+{/block:Posts}
+
+<div class="loading"><div class="spinner"></div></div></section>
+    
+<footer>
+<div class="page-load-status">
+    <a class="infinite-scroll-last bl nomas" title="scroll to top"><span>End of Content</span></a>
+    <a class="infinite-scroll-error bl nomas" title="scroll to top"><span>Oops! There was an error.</span></a>
+</div>{block:Pagination}<div class="pagination initial {block:PreviousPage}left{/block:PreviousPage}">{block:NextPage}<a href="{NextPage}" class="next bl {block:PreviousPage}float{/block:PreviousPage}"><span>Next Page</span></a>{/block:NextPage}{block:PreviousPage}<a href="{PreviousPage}" class="bl"><span>Prev Page</span></a>{/block:PreviousPage}</div>{block:ifinfinitescroll}<div class="pagination initial"><a class="load bl">Load More Posts</a></div>{/block:ifinfinitescroll}{/block:Pagination}{block:PermalinkPagination}<div class="pagination {block:PreviousPost}left{/block:PreviousPost}">{block:NextPost}<a href="{NextPost}" class="next bl {block:PreviousPost}float{/block:PreviousPost}"><span>Next Post</span></a>{/block:NextPost}{block:PreviousPost}<a href="{PreviousPost}" class="bl"><span>Prev Post</span></a>{/block:PreviousPost}</div>
+{/block:PermalinkPagination}{block:ifFooterText}<div class="ftext">{text:Footer Text}</div>{/block:ifFooterText}</footer>
+
+</div>
+{block:ContentSource}
+<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"
+width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}
+
+
+<!-- jquery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script><script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script><script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.js"></script>{block:indexpage}<script type="text/javascript" src="//static.tumblr.com/i5s2zks/9Acok8oo2/bct-timeago.min.js"></script>{block:ifinfinitescroll}<script src="https://unpkg.com/infinite-scroll@3.0.5/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifinfinitescroll}{/block:indexpage}<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script><script src="//static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script><script src="https://unpkg.com/feather-icons@4.9.0/dist/feather.min.js"></script><script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+<script>
+function showposts() {     
+    var els = $('article'),
+    i = 0,
+    f = function () {
+        $(els[i++]).addClass('loaded');
+        if(i < els.length) setTimeout(f, 50);
+    };
+    f();  
+}
+function showfooter() {
+    $('footer').addClass('loaded');
+}
+function closemodal() {
+    $('modal').fadeOut(200, "linear").empty();
+}
+function notes(selector, suffix) {
+    $(selector).each(function(){
+        if ($(this).hasClass('done')) { 
+            return
+        }
+        else {
+        var n = $(this).html().split(' ')[0].replace(/,/g, '');
+        if (n > 999) {
+            n = Math.floor(n / 100) / 10;
+            $(this).text(n + 'k ' + suffix + 's');
+        }
+        else if (n > 1 && n <= 999) {
+            $(this).text(n + ' ' + suffix + 's');
+        }
+        else {$(this).text(n + ' ' + suffix);}
+        $(this).addClass('done');
+        }
+    });     
+}
+function flexFrame() {
+   $('.comment').each(function() {
+        $(this).find('iframe').wrap("<div class='video'></div>");
+    });
+    flexibleFrames($('.video'));
+}
+function featuredTag(tagname) {
+    var taggie = tagname;
+    if ($('.ftags').length === 0) {
+        if ($('.ftext').length === 0) {
+            $('footer').append('<div class="ftags"></div>');
+        }
+        else {$('.ftext').prepend('<div class="ftags"></div>');}
+        $('.initial').prepend('<a class="bl hey"><span>Featured Tags</span></a>');
+    }
+    var tagdata = "https://{name}.tumblr.com/api/read/json?tagged=" + taggie + "&callback=?";
+    $.getJSON(tagdata).done(function (data) {
+        var totalPosts = data["posts-total"];
+        var totalInt = parseInt(totalPosts);
+        if (totalInt < 20) {
+            var randomInt = Math.floor(Math.random()*(totalPosts));
+        }
+        else {
+            var randomInt = Math.floor(Math.random()*(20));
+        };  
+        var lastPost = data.posts[randomInt];
+        var lastImgUrl = lastPost["photo-url-500"];
+        var lastImg = 'background-image:url("' + lastImgUrl + '")';
+        var tagpackage = "<a class='small' href='/tagged/" + taggie + "' style='" + lastImg + "'><span>" + "#" + taggie + "<br><span class='hehe'>" + totalPosts + "</span></span></a>";  
+        if (typeof lastImgUrl == 'undefined') {
+            var lastImg = 'background:{color:accents}';
+            var tagpackage = "<a class='over' href='/tagged/" + taggie + "' style='" + lastImg + "'><i data-feather='tag'></i><span>" + "#" + taggie + "<br><span class='hehe'>" + totalPosts + "</span></span></a>";         
+        };        
+        $('.ftags').append(tagpackage);  
+        notes('.hehe', 'post');        
+        feather.replace();  
+    });  
+}
+function printTags() {
+        {block:iffeaturedtagone}
+        featuredTag('{text:featured tag one}');
+        {/block:iffeaturedtagone}
+        {block:iffeaturedtagtwo}
+        featuredTag('{text:featured tag two}');
+        {/block:iffeaturedtagtwo}
+        {block:iffeaturedtagthree}
+        featuredTag('{text:featured tag three}');
+        {/block:iffeaturedtagthree}
+        {block:iffeaturedtagfour}
+        featuredTag('{text:featured tag four}');
+        {/block:iffeaturedtagfour}   
+}
+if($(window).width() < 825) {
+    $('body').addClass('sub800');
+}
+if($(window).width() < 600) {$('body').addClass('sub600');}
+$(document).ready(function() {  
+    $(window).on('resize', function() {
+        if($(window).width() < 825) {
+            $('body').addClass('sub800');
+            $('modal').removeClass('slide');
+            setTimeout(closemodal,250);
+        }
+        if ($(window).width() < 600) {$('body').addClass('sub600');}
+        if ($(window).width() >= 600) {$('body').removeClass('sub600');}
+        if ($(window).width() >= 825) {$('body').removeClass('sub800');}
+    });    
+    {block:ifFeaturedTags}
+    if ($('body').is('#page1')) {
+        printTags();    
+    };
+    {/block:ifFeaturedTags}    
+    initPhotosets();    
+    feather.replace();    
+    var $audio = $('iframe.tumblr_audio_player');
+    $audio.load(function() {
+    $(this).contents().find('head').append('<style type="text/css">' +
+      '.audio-player { background: {color:background}; color: {color:text} !important; }' + '</style>');
+    });
+    $('body').tooltip({track:true});
+    $('.i nav').clone().appendTo('footer');
+    $('footer nav').append('<a class="nomas">back to top</a>');
+    $('.nomas').click(function() {$('body, html').animate({scrollTop:0},1000);});         
+    $('article').find('p').filter(function (){return $.trim(this.innerHTML) == ""}).remove(); 
+    flexFrame();    
+    {block:permalinkpage}
+    setTimeout(showposts, 500);
+    setTimeout(showfooter, 600);    
+    {/block:permalinkpage}
+    var $container = $('section');   
+    var statcounter = 1; 
+    {block:indexpage}        
+    $container.imagesLoaded(function(){
+        var multiply = statcounter * 10;
+        var sback = multiply - 9;   
+        statcounter++;
+        $('article:nth-of-type(' + multiply +')').addClass('big');
+        $('article:nth-of-type('+ sback +')').addClass('big');
+        $container.isotope({
+            itemSelector: 'article',
+            masonry: {
+                gutter: {select:gutter},
+                columnWidth: 150,                
+                horizontalOrder: true
+            }
+        });
+    });
+    $container.on( 'layoutComplete', function(event, laidOutItems) {
+        setTimeout(showposts, 500);
+        setTimeout(showfooter, 600); 
+    });     
+    notes('.not', 'note');
+    $('.small, .over').click(function(e){
+        e.preventDefault();        
+        $(this).closest('article').find('.inner').clone().appendTo('modal'); 
+        $('modal').fadeIn(300, "linear");
+        flexFrame();          
+        $('modal').css('visibility', 'visible');
+        setTimeout(function(){$('modal').addClass('slide');},100);
+        e.stopPropagation();        
+    });
+    $('modal').on('click', function(e) {
+        if (e.target !== this) return;
+        $('modal').removeClass('slide');
+        setTimeout(closemodal,250);
+    });
+    $('.tm').timeAgo({
+        time:"short",
+        spaces:true,
+        suffix:" ago"
+    }); 
+    {block:ifinfinitescroll} 
+    var $grid = $container.infiniteScroll({
+        append: 'article',
+        path: '.pagination a.next',
+        status: '.page-load-status',
+        hideNav: '.pagination',
+        scrollThreshold: 0,
+        button:'.load',
+        loadOnScroll: false,
+    });
+    $grid.on( 'request.infiniteScroll', function( event, path ) {
+        $('.loading').show();
+    });        
+    $grid.on( 'append.infiniteScroll', function( event, response, path, items ) {
+        $('footer').removeClass('loaded');
+        var $newElems = $( items );
+        var $newElemsIDs = $newElems.map(function() {return this.id;}).get();
+        Tumblr.LikeButton.get_status_by_post_ids($newElemsIDs);
+        initPhotosets();     
+        flexFrame(); 
+        $newElems.imagesLoaded(function(){
+            var multiply = statcounter * 10;
+            var sback = multiply - 9;             
+            $('article:nth-of-type(' + multiply +')').addClass('big');
+            $('article:nth-of-type('+ sback +')').addClass('big');
+            $container.isotope( 'appended', $newElems, true );
+            statcounter++;
+        });
+        $newElems.find($audio).load(function() {
+            $(this).contents().find('head').append('<style type="text/css">' + '.audio-player { background: {color:background}; color: {color:text} !important; }' + '</style>');
+        }); 
+        $container.imagesLoaded().done( function() {
+            setTimeout(showposts,100); 
+            setTimeout(showfooter,400);
+            setTimeout(function() {$('.loading').hide();},1000);
+        });
+        $newElems.find('.tm').timeAgo({
+            time:"short",
+            spaces:true,
+            suffix:" ago"
+        }); 
+        notes('.not', 'note');
+        $newElems.find('.small, .over').click(function(e){
+            e.preventDefault();        
+            $(this).closest('article').find('.inner').clone().appendTo('modal');
+            flexFrame();       
+            $('modal').fadeIn(300, "linear");
+            $('modal').css('visibility', 'visible');
+            setTimeout(function(){$('modal').addClass('slide');},100);
+            e.stopPropagation();        
+        });
+        $newElems.find('p').filter(function (){return $.trim(this.innerHTML) == ""}).remove(); 
+        feather.replace();         
+    });    
+    var $nextLink = $('.pagination a.next');
+    if ( !$nextLink.length ) {
+        $('.load, .pagination,.infinite-scroll-error,.infinite-scroll-request').hide();
+        $('.page-load-status').show();
+    }
+    $grid.on( 'last.infiniteScroll', function( event, response, path ) {
+        $container.imagesLoaded().done( function() {
+            setTimeout(showposts, 500);
+            setTimeout(showfooter, 600);
+            $('.hey').addClass('stay').closest('.pagination').addClass('left');    
+        });    
+    }); 
+    $grid.on( 'error.infiniteScroll', function( event, error, path ) {
+        $container.imagesLoaded().done( function() {
+            setTimeout(showposts, 500); 
+            setTimeout(showfooter, 600); 
+            $('.hey').addClass('stay').closest('.pagination').addClass('left');                
+        }); 
+    });   
+{/block:ifinfinitescroll}{/block:indexpage}
+    $('footer').append('<span class="etc" style="margin-top:10px;display:block;font-size:.8em;opacity:.7">theme by <a href="https://sorrism.tumblr.com" target="_blank">sorrism</a></span>');
+});
+</script>
+</body>
+
+</html>
