@@ -1347,7 +1347,10 @@ $(document).ready(function() {
         $('modal').fadeIn(300, "linear");
         $('modal').css('visibility', 'visible');
         setTimeout(function(){$('modal').addClass('slide');},100);
-        flexFrame();
+	$('modal').find('iframe.tumblr_audio_player').load(function() {
+            $(this).contents().find('head').append('<style type="text/css">' + '.audio-player {background: {color:background} !important;}' + '</style>');
+        });
+	flexFrame();
         e.stopPropagation();        
     });
     $('modal').on('click', function(e) {
@@ -1408,6 +1411,9 @@ $(document).ready(function() {
             $('modal').fadeIn(300, "linear");
             $('modal').css('visibility', 'visible');
             setTimeout(function(){$('modal').addClass('slide');},100);
+	    $('modal').find('iframe.tumblr_audio_player').load(function() {
+            	$(this).contents().find('head').append('<style type="text/css">' + '.audio-player {background: {color:background} !important;}' + '</style>');	
+	    });	    
             flexFrame();             
             e.stopPropagation();        
         });
