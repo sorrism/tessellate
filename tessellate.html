@@ -1244,15 +1244,15 @@ function featuredTag(tagname) {
         else {$('.ftext').prepend('<div class="ftags"></div>');}
         $('.initial').prepend('<a class="bl hey"><span>Featured Tags</span></a>');
     }
-    var tagdata = "https://{name}.tumblr.com/api/read/json?tagged=" + taggie + "&callback=?";
+    var tagdata = "https://{name}.tumblr.com/api/read/json?tagged=" + taggie + "&num=50&callback=?";
     $.getJSON(tagdata).done(function (data) {
         var totalPosts = data["posts-total"];
         var totalInt = parseInt(totalPosts);
-        if (totalInt < 20) {
+        if (totalInt < 50) {
             var randomInt = Math.floor(Math.random()*(totalPosts));
         }
         else {
-            var randomInt = Math.floor(Math.random()*(20));
+            var randomInt = Math.floor(Math.random()*(50));
         };  
         var lastPost = data.posts[randomInt];
         var lastImgUrl = lastPost["photo-url-500"];
